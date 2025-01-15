@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You for Visiting!</h1>
+    <p>You will be redirected back to the main page in 5 seconds...</p>
+  </div>
+
+  <footer class="footer fixed-bottom">
+    <p>&copy; 2025 Article Website</p>
+</footer>
+  <script>
+    setTimeout(() => {
+      // Add coins to localStorage
+      const currentCoins = parseInt(localStorage.getItem('coins')) || 0;
+      localStorage.setItem('coins', currentCoins + 10);
+
+      // Redirect to main.html
+      window.location.href = '../faucet.html';
+    }, 5000);
+  </script>
+</body>
+</html>
